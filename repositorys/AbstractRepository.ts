@@ -1,5 +1,5 @@
 import { Model } from "mongoose"
-import { ResponseRequest } from "../services/ResponseRequest"
+import { ResponseRequest } from "../handler/ResponseRequest"
 
 export class AbstractRepository {
     private REP: Model<any>
