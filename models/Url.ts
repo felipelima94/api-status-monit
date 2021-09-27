@@ -7,6 +7,7 @@ const Url = new Schema<UrlSchemaInterface>({
     category: { type: Schema.Types.ObjectId, ref: 'Category' },
     tags: [{ type: Schema.Types.ObjectId, ref: 'Tag' }],
     cron: { type: Number, required: true },
+    last_status: { type: String, default: 'UNDEFINED' },
     last_ok: { type: Date },
     last_check: { type: Date, required: true, default: new Date() }
 })
