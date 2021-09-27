@@ -5,6 +5,10 @@ import "./database"
 import { UrlController } from "./controllers/UrlContoller";
 import { TagController } from "./controllers/TagContoller";
 import { CategoryController } from "./controllers/CategoryContoller";
+import { HealthCheack } from "./services/Cron";
+
+new HealthCheack()
+
 
 const app = express();
 const PORT = 3000;
@@ -16,4 +20,4 @@ app.use('/url', new UrlController().getRoutes())
 app.use('/tag', new TagController().getRoutes())
 app.use('/category', new CategoryController().getRoutes())
 
-app.listen(PORT, () => console.log(`⚡️[server]: Server is running at https://localhost:${PORT}`))
+app.listen(PORT, () => console.info(`⚡️[server]: Server is running at https://localhost:${PORT}`))
